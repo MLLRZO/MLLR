@@ -234,3 +234,151 @@ li {
 }
 /* proxima aula continuaremos com CSS - tratamento de guias */
 /* Enzo Müller Santana RA 252314 */
+.guia {
+    background:
+    linear-gradient(180deg,
+    rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.7)),
+    linear-gradient(90deg,
+    rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.7)),;
+}
+.grade-guia {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.2rem;
+}
+.bloco-guia {
+    padding: 1.5rem;
+}
+.bloco-guia h3 {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1.35rem;
+}
+.destaque-guia {
+    background: linear-gradient(160deg,
+    rgba(10, 92, 120, 0.95),
+    rgba(22, 166, 182, 0.8),);
+}
+.destaque-guia code {
+    color: #ffffff;
+}
+code {
+    padding: 0.15rem 0.4rem;
+    border-radius: 8px;
+    background: rgb(7, 59, 76, 0.08);
+    font-family: Consolas, monospace;
+}
+.painel-planejamento {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 1.4rem;
+    padding: 1.5rem;
+}
+.formulario {
+    display: grid;
+    gap: 0.85rem;
+}
+.formulario input,
+.formulario select,
+.formulario button {
+    width: 100%;
+    padding: 0.95rem 1rem;
+    border-radius: 16px;
+    border: 1px solid rgba(7, 59, 76, 0.16);
+    font: inherit;
+}
+.formulario input,
+.formulario select {
+    background: #ffffff;
+}
+.formulario button {
+    background: var(--oceano);
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+}
+/* continuaremos com dicas */
+.dicas {
+    padding: 0.4rem 0.4rem 0.4rem 0;
+}
+.dicas h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+.rodape {
+    padding: 2rem 6vw 3rem;
+    color: var(--texto-suave);
+}
+.rodape p {
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+/* A partir deste ponto iremos tratar em CSS o layout MOBILE */
+@media (max-width: 980px) {
+    .cards,
+    .grade-guia,
+    .painel-planejamento {
+        grid-template-columns: 1fr;
+    }
+    .hero {
+        min-height: auto;
+        padding-bottom: 3rem;
+    }
+}
+@media (max-width: 640px) {
+    .menu {
+        flex-wrap: wrap;
+    }
+    .hero-conteudo {
+        padding-top: 4rem;
+    }
+    .secao,
+    .hero,
+    .rodape {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+}
+/* Segunda pagina - hero */
+.grade-definicoes,
+.grade-recursos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.2rem;
+}
+.card-definicao,
+.recurso,
+.quadro-info,
+.bloco-explicacao {
+    background: rgba(255, 255, 255, 0.86);
+    border: 1px solid var(--borda);
+    border-radius: 28px;
+    box-shadow: var(--sombra);
+}
+.card-definicao,
+.recurso,
+.bloco-explicacao {
+    padding: 1.5rem;
+}
+.card-definicao h3,
+.recurso h3,
+.coluna-info h3,
+.bloco-explicacao h3 {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-family: 'Fraunces', sans-serif;
+    font-size: 1.35;
+}
+.destaque-definicao {
+    background: linear-gradient(160deg,
+    rgba(235, 111, 77, 0.92),
+    rgba(245, 166, 35, 0.82));
+    color: #ffffff;
+}
+.destaque-definicao code {
+    color: #ffffff;
+}
+/* Proxima aula iremos tratar - Segunda pagina | Seções Auxiliares */
+/* Enzo Müller Santana RA:252314 */
