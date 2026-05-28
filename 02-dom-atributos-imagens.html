@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando o DOM - Seletores</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .card {
+            background-color: white;
+            max-width: 700px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #0b72b9;
+        }
+
+        .mensagem {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #dff0ff;
+            border-left: 5px solid #0b72b9;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="card">
+        <h1>Exemplo 01 - Selecionando elementos no DOM</h1>
+
+        <div>
+            <p class="paragrafo1">Primeiro parágrafo</p>
+        </div>
+
+        <div>
+            <ul>
+                <li id="item1">Item 1</li>
+                <li>Item 2</li>
+            </ul>
+        </div>
+
+        <div class="mensagem"></div>
+    </main>
+
+    <script>
+
+        let tituloPagina = document.querySelector("title");
+        console.log("Titulo da pagina:", tituloPagina.textContent);
+
+        let paragrafoPorClasse = document.querySelector(".paragrafo1");
+        paragrafoPorClasse.textContent = "Paragrafo modificado com querySelector";
+
+        let item = document.querySelector("#item1");
+        item.textContent = "Item 1 modificado pelo ID";
+
+        let listaLi = document.querySelectorAll("li");
+        listaLi[1].textContent = "Item 2 modificado com querySelectorAll";
+
+        let mensagem = document.querySelector(".mensagem");
+        mensagem.textContent = "Todos os elementos foram acessados e modificados com JavaScript.";
+
+    </script>
+
+</body>
+</html>
